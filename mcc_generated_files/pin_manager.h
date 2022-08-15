@@ -65,6 +65,43 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set LED aliases
+#define LED_TRIS                 TRISBbits.TRISB2
+#define LED_LAT                  LATBbits.LATB2
+#define LED_PORT                 PORTBbits.RB2
+#define LED_WPU                  WPUBbits.WPUB2
+#define LED_ANS                  ANSELBbits.ANSB2
+#define LED_SetHigh()            do { LATBbits.LATB2 = 1; } while(0)
+#define LED_SetLow()             do { LATBbits.LATB2 = 0; } while(0)
+#define LED_Toggle()             do { LATBbits.LATB2 = ~LATBbits.LATB2; } while(0)
+#define LED_GetValue()           PORTBbits.RB2
+#define LED_SetDigitalInput()    do { TRISBbits.TRISB2 = 1; } while(0)
+#define LED_SetDigitalOutput()   do { TRISBbits.TRISB2 = 0; } while(0)
+#define LED_SetPullup()          do { WPUBbits.WPUB2 = 1; } while(0)
+#define LED_ResetPullup()        do { WPUBbits.WPUB2 = 0; } while(0)
+#define LED_SetAnalogMode()      do { ANSELBbits.ANSB2 = 1; } while(0)
+#define LED_SetDigitalMode()     do { ANSELBbits.ANSB2 = 0; } while(0)
+
+// get/set input aliases
+#define input_TRIS                 TRISCbits.TRISC7
+#define input_LAT                  LATCbits.LATC7
+#define input_PORT                 PORTCbits.RC7
+#define input_WPU                  WPUCbits.WPUC7
+#define input_OD                   ODCONCbits.ODC7
+#define input_ANS                  ANSELCbits.ANSC7
+#define input_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
+#define input_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
+#define input_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
+#define input_GetValue()           PORTCbits.RC7
+#define input_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
+#define input_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
+#define input_SetPullup()          do { WPUCbits.WPUC7 = 1; } while(0)
+#define input_ResetPullup()        do { WPUCbits.WPUC7 = 0; } while(0)
+#define input_SetPushPull()        do { ODCONCbits.ODC7 = 0; } while(0)
+#define input_SetOpenDrain()       do { ODCONCbits.ODC7 = 1; } while(0)
+#define input_SetAnalogMode()      do { ANSELCbits.ANSC7 = 1; } while(0)
+#define input_SetDigitalMode()     do { ANSELCbits.ANSC7 = 0; } while(0)
+
 /**
    @Param
     none

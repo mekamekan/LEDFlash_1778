@@ -69,6 +69,17 @@ void main(void)
     while (1)
     {
         // Add your application code
+        if(input_PORT == 1){
+            
+            LED_SetHigh();
+            
+        }
+        else{
+            
+            LED_SetLow();
+            
+        }
+        
     }
 }
 /**
